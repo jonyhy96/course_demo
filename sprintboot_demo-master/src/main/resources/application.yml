@@ -1,0 +1,13 @@
+server:
+  port: 8089
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: ${MYSQL_HOST:jdbc:mysql://localhost:3306/select_course?characterEncoding=utf-8}
+    username: root
+    password: 123456
+debug: false
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
