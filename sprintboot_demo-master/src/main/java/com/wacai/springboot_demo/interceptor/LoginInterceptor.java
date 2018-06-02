@@ -14,29 +14,9 @@ import org.springframework.web.servlet.ModelAndView;
  */
 public class LoginInterceptor implements HandlerInterceptor {
 
-//    private static final String[] EXCLUDE_PREFIX = {"/user"};
-
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest,
             HttpServletResponse httpServletResponse, Object o) throws Exception {
-//        String url =httpServletRequest.getServletPath();
-//        boolean exclude = false;
-//        for(String pre : EXCLUDE_PREFIX){
-//            if(url.startsWith(pre)){
-//                exclude = true;
-//                break;
-//            }
-//        }
-//        if(url.equals("/")){
-//            exclude = true;
-//        }
-//        if(!exclude){
-//            HttpSession session = httpServletRequest.getSession();
-//            if(session.getAttribute("userId") == null){
-//                httpServletResponse.sendRedirect("/user/login");
-//                return false;
-//            }
-//        }
         long starttime = System.currentTimeMillis();
         httpServletRequest.setAttribute("starttime",starttime);
         return true;
